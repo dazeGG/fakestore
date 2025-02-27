@@ -3,9 +3,11 @@
 		<NH1>Categories</NH1>
 		<NGrid cols="3" x-gap="" y-gap="" class="gap-4">
 			<NGridItem v-for="category in categories" :key="category">
-				<NCard>
-					{{ category }}
-				</NCard>
+				<RouterLink :to="{ name: 'ProductsPage', params: { category } }">
+					<NCard size="small">
+						{{ category }}
+					</NCard>
+				</RouterLink>
 			</NGridItem>
 		</NGrid>
 	</div>
