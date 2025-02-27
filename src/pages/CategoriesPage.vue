@@ -1,11 +1,13 @@
 <template>
 	<div>
-		<NH1>Categories</NH1>
-		<NGrid cols="3" x-gap="" y-gap="" class="gap-4">
+		<div class="h1">Categories</div>
+		<NGrid cols="4" x-gap="" y-gap="" class="gap-4">
 			<NGridItem v-for="category in categories" :key="category">
 				<RouterLink :to="{ name: 'ProductsPage', params: { category } }">
 					<NCard size="small">
-						{{ category }}
+						<div class="text-center">
+							<div class="h4">{{ category }}</div>
+						</div>
 					</NCard>
 				</RouterLink>
 			</NGridItem>
@@ -17,7 +19,7 @@
 import { ref } from 'vue'
 import { ProductsServices } from '@/lib/api/services'
 
-import { NH1, NCard, NGrid, NGridItem } from 'naive-ui'
+import { NCard, NGrid, NGridItem } from 'naive-ui'
 
 const categories = ref<string[]>([])
 
