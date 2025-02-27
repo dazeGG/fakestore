@@ -1,6 +1,5 @@
 <template>
-	<div>
-		<div class="h1">Categories</div>
+	<Page title="Categories">
 		<NGrid cols="4" x-gap="" y-gap="" class="gap-4">
 			<NGridItem v-for="category in categories" :key="category">
 				<RouterLink :to="{ name: 'ProductsPage', params: { category } }">
@@ -12,7 +11,7 @@
 				</RouterLink>
 			</NGridItem>
 		</NGrid>
-	</div>
+	</Page>
 </template>
 
 <script setup lang="ts">
@@ -20,6 +19,7 @@ import { ref } from 'vue'
 import { ProductsServices } from '@/lib/api/services'
 
 import { NCard, NGrid, NGridItem } from 'naive-ui'
+import Page from '@/components/common/Page.vue'
 
 const categories = ref<string[]>([])
 
