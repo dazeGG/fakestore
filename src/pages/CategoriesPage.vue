@@ -15,14 +15,14 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { CategoriesServices } from '@/lib/api/services'
+import { ProductsServices } from '@/lib/api/services'
 
 import { NH1, NCard, NGrid, NGridItem } from 'naive-ui'
 
 const categories = ref<string[]>([])
 
 const loadCategories = async () => {
-	categories.value = (await CategoriesServices.getCategories()).categories
+	categories.value = (await ProductsServices.getCategories()).categories
 }
 
 loadCategories()
