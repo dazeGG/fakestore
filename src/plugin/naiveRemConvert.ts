@@ -20,7 +20,7 @@ export default ({
 		'scrollbarBorderRadius': '0.3125rem',
 		'boxShadow1': '0 0.0625rem 0.125rem -0.125rem rgba(0, 0, 0, .08), 0 0.1875rem 0.375rem 0 rgba(0, 0, 0, .06), 0 0.3125rem 0.75rem 0.25rem rgba(0, 0, 0, .04)',
 		'boxShadow2': '0 0.1875rem 0.375rem -0.25rem rgba(0, 0, 0, .12), 0 0.375rem 1rem 0 rgba(0, 0, 0, .08), 0 0.5625rem 1.75rem 0.5rem rgba(0, 0, 0, .05)',
-		'boxShadow3': '0 0.375rem 1rem -0.5625rem rgba(0, 0, 0, .08), 0 0.5625rem 1.75rem 0 rgba(0, 0, 0, .05), 0 0.75rem 3rem 1rem rgba(0, 0, 0, .03)'
+		'boxShadow3': '0 0.375rem 1rem -0.5625rem rgba(0, 0, 0, .08), 0 0.5625rem 1.75rem 0 rgba(0, 0, 0, .05), 0 0.75rem 3rem 1rem rgba(0, 0, 0, .03)',
 	},
 	'Alert': {
 		'iconMargin': '0.6875rem 0.5rem 0 0.75rem',
@@ -38,16 +38,16 @@ export default ({
 		'borderInfo': '0.0625rem solid rgba(199, 223, 251, 1)',
 		'borderSuccess': '0.0625rem solid rgba(197, 231, 213, 1)',
 		'borderWarning': '0.0625rem solid rgba(250, 224, 181, 1)',
-		'borderError': '0.0625rem solid rgba(243, 203, 211, 1)'
+		'borderError': '0.0625rem solid rgba(243, 203, 211, 1)',
 	},
 	'Anchor': {
 		'linkFontSize': '0.8125rem',
 		'linkPadding': '0 0 0 1rem',
 		'railWidth': '0.25rem',
-		'borderRadius': '0.1875rem'
+		'borderRadius': '0.1875rem',
 	},
 	'AutoComplete': {
-		'menuBoxShadow': '0 0.1875rem 0.375rem -0.25rem rgba(0, 0, 0, .12), 0 0.375rem 1rem 0 rgba(0, 0, 0, .08), 0 0.5625rem 1.75rem 0.5rem rgba(0, 0, 0, .05)'
+		'menuBoxShadow': '0 0.1875rem 0.375rem -0.25rem rgba(0, 0, 0, .12), 0 0.375rem 1rem 0 rgba(0, 0, 0, .08), 0 0.5625rem 1.75rem 0.5rem rgba(0, 0, 0, .05)',
 	},
 	'Avatar': {
 		'borderRadius': '0.1875rem',
@@ -57,10 +57,10 @@ export default ({
 		'heightSmall': '1.75rem',
 		'heightMedium': '2.125rem',
 		'heightLarge': '2.5rem',
-		'heightHuge': '2.875rem'
+		'heightHuge': '2.875rem',
 	},
 	'AvatarGroup': {
-		'gap': '-0.75rem'
+		'gap': '-0.75rem',
 	},
 	'BackTop': {
 		'width': '2.75rem',
@@ -69,14 +69,14 @@ export default ({
 		'iconSize': '1.625rem',
 		'boxShadow': '0 0.125rem 0.5rem 0rem rgba(0, 0, 0, .12)',
 		'boxShadowHover': '0 0.125rem 0.75rem 0rem rgba(0, 0, 0, .18)',
-		'boxShadowPressed': '0 0.125rem 0.75rem 0rem rgba(0, 0, 0, .18)'
+		'boxShadowPressed': '0 0.125rem 0.75rem 0rem rgba(0, 0, 0, .18)',
 	},
 	'Badge': {
-		'fontSize': '0.75rem'
+		'fontSize': '0.75rem',
 	},
 	'Breadcrumb': {
 		'fontSize': '0.875rem',
-		'itemBorderRadius': '0.1875rem'
+		'itemBorderRadius': '0.1875rem',
 	},
 	'Button': {
 		'paddingTiny': '0 0.375rem',
@@ -136,12 +136,12 @@ export default ({
 		'borderHoverError': '0.0625rem solid #de576d',
 		'borderPressedError': '0.0625rem solid #ab1f3f',
 		'borderFocusError': '0.0625rem solid #de576d',
-		'borderDisabledError': '0.0625rem solid #d03050'
+		'borderDisabledError': '0.0625rem solid #d03050',
 	},
 	'Calendar': {
 		'titleFontSize': '1.375rem',
 		'borderRadius': '0.1875rem',
-		'fontSize': '0.875rem'
+		'fontSize': '0.875rem',
 	},
 	'Card': {
 		'paddingSmall': '0.75rem 1rem 0.75rem',
@@ -160,19 +160,19 @@ export default ({
 		'fontSizeLarge': '0.875rem',
 		'fontSizeHuge': '0.875rem',
 		'boxShadow': '0 0.0625rem 0.125rem -0.125rem rgba(0, 0, 0, .08), 0 0.1875rem 0.375rem 0 rgba(0, 0, 0, .06), 0 0.3125rem 0.75rem 0.25rem rgba(0, 0, 0, .04)',
-		'borderRadius': '0.1875rem'
+		'borderRadius': '0.1875rem',
 	},
 	'Carousel': {
 		'dotSize': '0.5rem',
 		'dotLineWidth': '1rem',
-		'dotLineWidthActive': '1.5rem'
+		'dotLineWidthActive': '1.5rem',
 	},
 	'Cascader': {
 		'menuBorderRadius': '0.1875rem',
 		'menuBoxShadow': '0 0.1875rem 0.375rem -0.25rem rgba(0, 0, 0, .12), 0 0.375rem 1rem 0 rgba(0, 0, 0, .08), 0 0.5625rem 1.75rem 0.5rem rgba(0, 0, 0, .05)',
 		'optionHeight': '2.125rem',
 		'optionFontSize': '0.875rem',
-		'columnWidth': '11.25rem'
+		'columnWidth': '11.25rem',
 	},
 	'Checkbox': {
 		'sizeSmall': '0.875rem',
@@ -188,16 +188,16 @@ export default ({
 		'borderDisabledChecked': '0.0625rem solid rgb(224, 224, 230)',
 		'borderChecked': '0.0625rem solid #18a058',
 		'borderFocus': '0.0625rem solid #18a058',
-		'boxShadowFocus': '0 0 0 0.125rem rgba(24, 160, 88, 0.3)'
+		'boxShadowFocus': '0 0 0 0.125rem rgba(24, 160, 88, 0.3)',
 	},
 	'Code': {
-		'fontSize': '0.875rem'
+		'fontSize': '0.875rem',
 	},
 	'Collapse': {
 		'titleFontSize': '0.875rem',
 		'fontSize': '0.875rem',
 		'itemMargin': '1rem 0 0 0',
-		'titlePadding': '1rem 0 0 0'
+		'titlePadding': '1rem 0 0 0',
 	},
 	'CollapseTransition': {},
 	'ColorPicker': {
@@ -210,7 +210,7 @@ export default ({
 		'heightLarge': '2.5rem',
 		'fontSizeSmall': '0.875rem',
 		'fontSizeMedium': '0.875rem',
-		'fontSizeLarge': '0.9375rem'
+		'fontSizeLarge': '0.9375rem',
 	},
 	'DataTable': {
 		'thPaddingSmall': '0.5rem',
@@ -233,7 +233,7 @@ export default ({
 		'fontSizeLarge': '0.9375rem',
 		'boxShadowBefore': 'inset -0.75rem 0 0.5rem -0.75rem rgba(0, 0, 0, .18)',
 		'boxShadowAfter': 'inset 0.75rem 0 0.5rem -0.75rem rgba(0, 0, 0, .18)',
-		'loadingSize': '1.75rem'
+		'loadingSize': '1.75rem',
 	},
 	'DatePicker': {
 		'itemSize': '1.5rem',
@@ -263,7 +263,7 @@ export default ({
 		'itemBorderRadius': '0.125rem',
 		'panelBoxShadow': '0 0.1875rem 0.375rem -0.25rem rgba(0, 0, 0, .12), 0 0.375rem 1rem 0 rgba(0, 0, 0, .08), 0 0.5625rem 1.75rem 0.5rem rgba(0, 0, 0, .05)',
 		'panelBorderRadius': '0.1875rem',
-		'scrollItemBorderRadius': '0.1875rem'
+		'scrollItemBorderRadius': '0.1875rem',
 	},
 	'Descriptions': {
 		'thPaddingBorderedSmall': '0.5rem 0.75rem',
@@ -278,7 +278,7 @@ export default ({
 		'fontSizeSmall': '0.875rem',
 		'fontSizeMedium': '0.875rem',
 		'fontSizeLarge': '0.9375rem',
-		'borderRadius': '0.1875rem'
+		'borderRadius': '0.1875rem',
 	},
 	'Dialog': {
 		'titleFontSize': '1.125rem',
@@ -295,7 +295,7 @@ export default ({
 		'fontSize': '0.875rem',
 		'border': '0.0625rem solid rgb(239, 239, 245)',
 		'closeBorderRadius': '0.1875rem',
-		'borderRadius': '0.1875rem'
+		'borderRadius': '0.1875rem',
 	},
 	'Divider': {},
 	'Drawer': {
@@ -309,7 +309,7 @@ export default ({
 		'footerBorderTop': '0.0625rem solid rgb(239, 239, 245)',
 		'closeSize': '1.375rem',
 		'closeIconSize': '1.125rem',
-		'closeBorderRadius': '0.1875rem'
+		'closeBorderRadius': '0.1875rem',
 	},
 	'Dropdown': {
 		'padding': '0.25rem 0',
@@ -341,14 +341,14 @@ export default ({
 		'fontSizeSmall': '0.875rem',
 		'fontSizeMedium': '0.875rem',
 		'fontSizeLarge': '0.9375rem',
-		'fontSizeHuge': '1rem'
+		'fontSizeHuge': '1rem',
 	},
 	'DynamicInput': {
 		'actionMargin': '0 0 0 1.25rem',
-		'actionMarginRtl': '0 1.25rem 0 0'
+		'actionMarginRtl': '0 1.25rem 0 0',
 	},
 	'DynamicTags': {
-		'inputWidth': '4rem'
+		'inputWidth': '4rem',
 	},
 	'Empty': {
 		'iconSizeTiny': '1.75rem',
@@ -360,13 +360,13 @@ export default ({
 		'fontSizeSmall': '0.875rem',
 		'fontSizeMedium': '0.875rem',
 		'fontSizeLarge': '0.9375rem',
-		'fontSizeHuge': '1rem'
+		'fontSizeHuge': '1rem',
 	},
 	'Equation': {},
 	'Flex': {
 		'gapSmall': '0.25rem 0.5rem',
 		'gapMedium': '0.5rem 0.75rem',
-		'gapLarge': '0.75rem 1rem'
+		'gapLarge': '0.75rem 1rem',
 	},
 	'Form': {
 		'feedbackPadding': '0.25rem 0 0 0.125rem',
@@ -389,13 +389,13 @@ export default ({
 		'labelPaddingHorizontal': '0 0.75rem 0 0',
 		'blankHeightSmall': '1.75rem',
 		'blankHeightMedium': '2.125rem',
-		'blankHeightLarge': '2.5rem'
+		'blankHeightLarge': '2.5rem',
 	},
 	'GradientText': {},
 	'Icon': {},
 	'IconWrapper': {},
 	'Image': {
-		'toolbarBorderRadius': '1.5rem'
+		'toolbarBorderRadius': '1.5rem',
 	},
 	'Input': {
 		'paddingTiny': '0 0.5rem',
@@ -426,11 +426,11 @@ export default ({
 		'borderError': '0.0625rem solid #d03050',
 		'borderHoverError': '0.0625rem solid #de576d',
 		'borderFocusError': '0.0625rem solid #de576d',
-		'boxShadowFocusError': '0 0 0 0.125rem rgba(208, 48, 80, 0.2)'
+		'boxShadowFocusError': '0 0 0 0.125rem rgba(208, 48, 80, 0.2)',
 	},
 	'InputNumber': {},
 	'Layout': {
-		'siderToggleButtonBorder': '0.0625rem solid rgb(239, 239, 245)'
+		'siderToggleButtonBorder': '0.0625rem solid rgb(239, 239, 245)',
 	},
 	'LegacyTransfer': {
 		'extraFontSize': '0.75rem',
@@ -441,26 +441,26 @@ export default ({
 		'fontSizeSmall': '0.875rem',
 		'fontSizeMedium': '0.875rem',
 		'fontSizeLarge': '0.9375rem',
-		'borderRadius': '0.1875rem'
+		'borderRadius': '0.1875rem',
 	},
 	'List': {
 		'borderRadius': '0.1875rem',
-		'fontSize': '0.875rem'
+		'fontSize': '0.875rem',
 	},
 	'LoadingBar': {
-		'height': '0.125rem'
+		'height': '0.125rem',
 	},
 	'Log': {
 		'loaderFontSize': '0.875rem',
-		'loaderBorder': '0.0625rem solid rgb(224, 224, 230)'
+		'loaderBorder': '0.0625rem solid rgb(224, 224, 230)',
 	},
 	'Menu': {
 		'borderRadius': '0.1875rem',
 		'itemHeight': '2.625rem',
-		'fontSize': '0.875rem'
+		'fontSize': '0.875rem',
 	},
 	'Mention': {
-		'menuBoxShadow': '0 0.1875rem 0.375rem -0.25rem rgba(0, 0, 0, .12), 0 0.375rem 1rem 0 rgba(0, 0, 0, .08), 0 0.5625rem 1.75rem 0.5rem rgba(0, 0, 0, .05)'
+		'menuBoxShadow': '0 0.1875rem 0.375rem -0.25rem rgba(0, 0, 0, .12), 0 0.375rem 1rem 0 rgba(0, 0, 0, .08), 0 0.5625rem 1.75rem 0.5rem rgba(0, 0, 0, .05)',
 	},
 	'Message': {
 		'margin': '0 0 0.5rem 0',
@@ -480,10 +480,10 @@ export default ({
 		'boxShadowError': '0 0.1875rem 0.375rem -0.25rem rgba(0, 0, 0, .12), 0 0.375rem 1rem 0 rgba(0, 0, 0, .08), 0 0.5625rem 1.75rem 0.5rem rgba(0, 0, 0, .05)',
 		'boxShadowWarning': '0 0.1875rem 0.375rem -0.25rem rgba(0, 0, 0, .12), 0 0.375rem 1rem 0 rgba(0, 0, 0, .08), 0 0.5625rem 1.75rem 0.5rem rgba(0, 0, 0, .05)',
 		'boxShadowLoading': '0 0.1875rem 0.375rem -0.25rem rgba(0, 0, 0, .12), 0 0.375rem 1rem 0 rgba(0, 0, 0, .08), 0 0.5625rem 1.75rem 0.5rem rgba(0, 0, 0, .05)',
-		'borderRadius': '0.1875rem'
+		'borderRadius': '0.1875rem',
 	},
 	'Modal': {
-		'boxShadow': '0 0.375rem 1rem -0.5625rem rgba(0, 0, 0, .08), 0 0.5625rem 1.75rem 0 rgba(0, 0, 0, .05), 0 0.75rem 3rem 1rem rgba(0, 0, 0, .03)'
+		'boxShadow': '0 0.375rem 1rem -0.5625rem rgba(0, 0, 0, .08), 0 0.5625rem 1.75rem 0 rgba(0, 0, 0, .05), 0 0.75rem 3rem 1rem rgba(0, 0, 0, .03)',
 	},
 	'Notification': {
 		'closeMargin': '1rem 0.75rem',
@@ -497,12 +497,12 @@ export default ({
 		'borderRadius': '0.1875rem',
 		'fontSize': '0.875rem',
 		'closeBorderRadius': '0.1875rem',
-		'boxShadow': '0 0.1875rem 0.375rem -0.25rem rgba(0, 0, 0, .12), 0 0.375rem 1rem 0 rgba(0, 0, 0, .08), 0 0.5625rem 1.75rem 0.5rem rgba(0, 0, 0, .05)'
+		'boxShadow': '0 0.1875rem 0.375rem -0.25rem rgba(0, 0, 0, .12), 0 0.375rem 1rem 0 rgba(0, 0, 0, .08), 0 0.5625rem 1.75rem 0.5rem rgba(0, 0, 0, .05)',
 	},
 	'PageHeader': {
 		'titleFontSize': '1.125rem',
 		'backSize': '1.375rem',
-		'fontSize': '0.875rem'
+		'fontSize': '0.875rem',
 	},
 	'Pagination': {
 		'itemPaddingSmall': '0 0.25rem',
@@ -552,11 +552,11 @@ export default ({
 		'itemFontSizeLarge': '0.875rem',
 		'jumperFontSizeSmall': '0.75rem',
 		'jumperFontSizeMedium': '0.875rem',
-		'jumperFontSizeLarge': '0.875rem'
+		'jumperFontSizeLarge': '0.875rem',
 	},
 	'Popconfirm': {
 		'iconSize': '1.375rem',
-		'fontSize': '0.875rem'
+		'fontSize': '0.875rem',
 	},
 	'Popover': {
 		'space': '0.375rem',
@@ -567,20 +567,20 @@ export default ({
 		'padding': '0.5rem 0.875rem',
 		'fontSize': '0.875rem',
 		'borderRadius': '0.1875rem',
-		'boxShadow': '0 0.1875rem 0.375rem -0.25rem rgba(0, 0, 0, .12), 0 0.375rem 1rem 0 rgba(0, 0, 0, .08), 0 0.5625rem 1.75rem 0.5rem rgba(0, 0, 0, .05)'
+		'boxShadow': '0 0.1875rem 0.375rem -0.25rem rgba(0, 0, 0, .12), 0 0.375rem 1rem 0 rgba(0, 0, 0, .08), 0 0.5625rem 1.75rem 0.5rem rgba(0, 0, 0, .05)',
 	},
 	'Popselect': {
-		'menuBoxShadow': '0 0.1875rem 0.375rem -0.25rem rgba(0, 0, 0, .12), 0 0.375rem 1rem 0 rgba(0, 0, 0, .08), 0 0.5625rem 1.75rem 0.5rem rgba(0, 0, 0, .05)'
+		'menuBoxShadow': '0 0.1875rem 0.375rem -0.25rem rgba(0, 0, 0, .12), 0 0.375rem 1rem 0 rgba(0, 0, 0, .08), 0 0.5625rem 1.75rem 0.5rem rgba(0, 0, 0, .05)',
 	},
 	'Progress': {
 		'fontSize': '0.875rem',
 		'fontSizeCircle': '1.75rem',
 		'railHeight': '0.5rem',
 		'iconSizeCircle': '2.25rem',
-		'iconSizeLine': '1.125rem'
+		'iconSizeLine': '1.125rem',
 	},
 	'QrCode': {
-		'borderRadius': '0.1875rem'
+		'borderRadius': '0.1875rem',
 	},
 	'Radio': {
 		'radioSizeSmall': '0.875rem',
@@ -601,12 +601,12 @@ export default ({
 		'buttonBoxShadowFocus': 'inset 0 0 0 0.0625rem #18a058, 0 0 0 0.125rem rgba(24, 160, 88, 0.3)',
 		'buttonBoxShadowHover': 'inset 0 0 0 0.0625rem #0000',
 		'buttonBoxShadow': 'inset 0 0 0 0.0625rem #0000',
-		'buttonBorderRadius': '0.1875rem'
+		'buttonBorderRadius': '0.1875rem',
 	},
 	'Rate': {
 		'sizeSmall': '1rem',
 		'sizeMedium': '1.25rem',
-		'sizeLarge': '1.5rem'
+		'sizeLarge': '1.5rem',
 	},
 	'Result': {
 		'titleFontSizeSmall': '1.625rem',
@@ -620,7 +620,7 @@ export default ({
 		'iconSizeSmall': '4rem',
 		'iconSizeMedium': '5rem',
 		'iconSizeLarge': '6.25rem',
-		'iconSizeHuge': '7.8125rem'
+		'iconSizeHuge': '7.8125rem',
 	},
 	'Scrollbar': {
 		'railInsetHorizontalBottom': 'auto 0.125rem 0.25rem 0.125rem',
@@ -629,16 +629,16 @@ export default ({
 		'railInsetVerticalLeft': '0.125rem auto 0.125rem 0.25rem',
 		'height': '0.3125rem',
 		'width': '0.3125rem',
-		'borderRadius': '0.3125rem'
+		'borderRadius': '0.3125rem',
 	},
 	'Skeleton': {
 		'borderRadius': '0.1875rem',
 		'heightSmall': '1.75rem',
 		'heightMedium': '2.125rem',
-		'heightLarge': '2.5rem'
+		'heightLarge': '2.5rem',
 	},
 	'Select': {
-		'menuBoxShadow': '0 0.1875rem 0.375rem -0.25rem rgba(0, 0, 0, .12), 0 0.375rem 1rem 0 rgba(0, 0, 0, .08), 0 0.5625rem 1.75rem 0.5rem rgba(0, 0, 0, .05)'
+		'menuBoxShadow': '0 0.1875rem 0.375rem -0.25rem rgba(0, 0, 0, .12), 0 0.375rem 1rem 0 rgba(0, 0, 0, .08), 0 0.5625rem 1.75rem 0.5rem rgba(0, 0, 0, .05)',
 	},
 	'Slider': {
 		'railHeight': '0.25rem',
@@ -656,12 +656,12 @@ export default ({
 		'indicatorBoxShadow': '0 0.125rem 0.5rem 0 rgba(0, 0, 0, 0.12)',
 		'indicatorBorderRadius': '0.1875rem',
 		'dotBorder': '0.125rem solid rgb(219, 219, 223)',
-		'dotBorderActive': '0.125rem solid #18a058'
+		'dotBorderActive': '0.125rem solid #18a058',
 	},
 	'Space': {
 		'gapSmall': '0.25rem 0.5rem',
 		'gapMedium': '0.5rem 0.75rem',
-		'gapLarge': '0.75rem 1rem'
+		'gapLarge': '0.75rem 1rem',
 	},
 	'Spin': {
 		'fontSize': '0.875rem',
@@ -669,11 +669,11 @@ export default ({
 		'sizeSmall': '1.75rem',
 		'sizeMedium': '2.125rem',
 		'sizeLarge': '2.5rem',
-		'sizeHuge': '2.875rem'
+		'sizeHuge': '2.875rem',
 	},
 	'Statistic': {
 		'labelFontSize': '0.875rem',
-		'valueFontSize': '1.5rem'
+		'valueFontSize': '1.5rem',
 	},
 	'Steps': {
 		'stepHeaderFontSizeSmall': '0.875rem',
@@ -683,7 +683,7 @@ export default ({
 		'indicatorSizeSmall': '1.375rem',
 		'indicatorSizeMedium': '1.75rem',
 		'indicatorIconSizeSmall': '0.875rem',
-		'indicatorIconSizeMedium': '1.125rem'
+		'indicatorIconSizeMedium': '1.125rem',
 	},
 	'Switch': {
 		'buttonHeightSmall': '0.875rem',
@@ -708,7 +708,7 @@ export default ({
 		'buttonBorderRadiusSmall': '0.1875rem',
 		'buttonBorderRadiusMedium': '0.1875rem',
 		'buttonBorderRadiusLarge': '0.1875rem',
-		'boxShadowFocus': '0 0 0 0.125rem rgba(24, 160, 88, 0.2)'
+		'boxShadowFocus': '0 0 0 0.125rem rgba(24, 160, 88, 0.2)',
 	},
 	'Table': {
 		'thPaddingSmall': '0.375rem',
@@ -720,7 +720,7 @@ export default ({
 		'fontSizeSmall': '0.875rem',
 		'fontSizeMedium': '0.875rem',
 		'fontSizeLarge': '0.9375rem',
-		'borderRadius': '0.1875rem'
+		'borderRadius': '0.1875rem',
 	},
 	'Tabs': {
 		'tabFontSizeSmall': '0.875rem',
@@ -775,7 +775,7 @@ export default ({
 		'closeIconSize': '0.875rem',
 		'tabFontSizeCard': '0.875rem',
 		'closeBorderRadius': '0.1875rem',
-		'tabBorderRadius': '0.1875rem'
+		'tabBorderRadius': '0.1875rem',
 	},
 	'Tag': {
 		'closeIconSizeTiny': '0.75rem',
@@ -803,10 +803,10 @@ export default ({
 		'borderInfo': '0.0625rem solid rgba(32, 128, 240, 0.3)',
 		'borderSuccess': '0.0625rem solid rgba(24, 160, 88, 0.3)',
 		'borderWarning': '0.0625rem solid rgba(240, 160, 32, 0.35)',
-		'borderError': '0.0625rem solid rgba(208, 48, 80, 0.23)'
+		'borderError': '0.0625rem solid rgba(208, 48, 80, 0.23)',
 	},
 	'Thing': {
-		'fontSize': '0.875rem'
+		'fontSize': '0.875rem',
 	},
 	'TimePicker': {
 		'itemFontSize': '0.75rem',
@@ -815,7 +815,7 @@ export default ({
 		'panelActionPadding': '0.5rem 0',
 		'panelBoxShadow': '0 0.1875rem 0.375rem -0.25rem rgba(0, 0, 0, .12), 0 0.375rem 1rem 0 rgba(0, 0, 0, .08), 0 0.5625rem 1.75rem 0.5rem rgba(0, 0, 0, .05)',
 		'itemBorderRadius': '0.1875rem',
-		'borderRadius': '0.1875rem'
+		'borderRadius': '0.1875rem',
 	},
 	'Timeline': {
 		'titleMarginMedium': '0 0 0.375rem 0',
@@ -829,12 +829,12 @@ export default ({
 		'circleBorderInfo': '0.125rem solid #2080f0',
 		'circleBorderError': '0.125rem solid #d03050',
 		'circleBorderSuccess': '0.125rem solid #18a058',
-		'circleBorderWarning': '0.125rem solid #f0a020'
+		'circleBorderWarning': '0.125rem solid #f0a020',
 	},
 	'Tooltip': {
 		'padding': '0.5rem 0.875rem',
 		'borderRadius': '0.1875rem',
-		'boxShadow': '0 0.1875rem 0.375rem -0.25rem rgba(0, 0, 0, .12), 0 0.375rem 1rem 0 rgba(0, 0, 0, .08), 0 0.5625rem 1.75rem 0.5rem rgba(0, 0, 0, .05)'
+		'boxShadow': '0 0.1875rem 0.375rem -0.25rem rgba(0, 0, 0, .12), 0 0.375rem 1rem 0 rgba(0, 0, 0, .08), 0 0.5625rem 1.75rem 0.5rem rgba(0, 0, 0, .05)',
 	},
 	'Transfer': {
 		'extraFontSizeSmall': '0.75rem',
@@ -854,13 +854,13 @@ export default ({
 		'fontSizeSmall': '0.875rem',
 		'fontSizeMedium': '0.875rem',
 		'fontSizeLarge': '0.9375rem',
-		'borderRadius': '0.1875rem'
+		'borderRadius': '0.1875rem',
 	},
 	'Tree': {
 		'fontSize': '0.875rem',
 		'nodeHeight': '1.875rem',
 		'nodeWrapperPadding': '0.1875rem 0',
-		'nodeBorderRadius': '0.125rem'
+		'nodeBorderRadius': '0.125rem',
 	},
 	'TreeSelect': {
 		'menuPadding': '0.25rem',
@@ -868,7 +868,7 @@ export default ({
 		'menuBorderRadius': '0.1875rem',
 		'menuHeight': 'calc(2.125rem * 7.6)',
 		'actionPadding': '0.5rem 0.75rem',
-		'headerPadding': '0.5rem 0.75rem'
+		'headerPadding': '0.5rem 0.75rem',
 	},
 	'Typography': {
 		'headerFontSize1': '1.875rem',
@@ -900,7 +900,7 @@ export default ({
 		'codeBorderRadius': '0.125rem',
 		'liFontSize': '0.875rem',
 		'pFontSize': '0.875rem',
-		'codeBorder': '0.0625rem solid #0000'
+		'codeBorder': '0.0625rem solid #0000',
 	},
 	'Upload': {
 		'fontSize': '0.875rem',
@@ -908,7 +908,7 @@ export default ({
 		'draggerBorder': '0.0625rem dashed rgb(224, 224, 230)',
 		'draggerBorderHover': '0.0625rem dashed #18a058',
 		'itemBorderImageCardError': '0.0625rem solid #d03050',
-		'itemBorderImageCard': '0.0625rem solid rgb(224, 224, 230)'
+		'itemBorderImageCard': '0.0625rem solid rgb(224, 224, 230)',
 	},
 	'Watermark': {},
 	'Split': {},
@@ -916,11 +916,11 @@ export default ({
 		'boxShadow': '0 0.125rem 0.5rem 0rem rgba(0, 0, 0, .16)',
 		'boxShadowHover': '0 0.125rem 0.75rem 0rem rgba(0, 0, 0, .24)',
 		'boxShadowPressed': '0 0.125rem 0.75rem 0rem rgba(0, 0, 0, .24)',
-		'borderRadiusSquare': '0.1875rem'
+		'borderRadiusSquare': '0.1875rem',
 	},
 	'FloatButtonGroup': {
 		'borderRadiusSquare': '0.1875rem',
-		'boxShadow': '0 0.125rem 0.5rem 0rem rgba(0, 0, 0, .12)'
+		'boxShadow': '0 0.125rem 0.5rem 0rem rgba(0, 0, 0, .12)',
 	},
-	'Marquee': {}
+	'Marquee': {},
 })

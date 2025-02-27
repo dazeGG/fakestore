@@ -9,12 +9,12 @@ export default defineConfig({
 	plugins: [
 		vue({
 			script: {
-				defineModel: true
-			}
+				defineModel: true,
+			},
 		}),
-		tailwindcss()
+		tailwindcss(),
 	],
 	resolve: {
-		alias: { '@': path.resolve(__dirname, 'src') }
-	}
+		alias: { '@': path.resolve(__dirname, 'src') },
+	},
 })
