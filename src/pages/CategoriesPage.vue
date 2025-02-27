@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<h1>Categories</h1>
+		<NH1>Categories</NH1>
 		<NGrid cols="3" x-gap="" y-gap="" class="gap-4">
 			<NGridItem v-for="category in categories" :key="category">
 				<NCard>
@@ -15,7 +15,7 @@
 import { ref } from 'vue'
 import { CategoriesServices } from '@/lib/api/services'
 
-import { NCard, NGrid, NGridItem } from 'naive-ui'
+import { NH1, NCard, NGrid, NGridItem } from 'naive-ui'
 
 const categories = ref<string[]>([])
 

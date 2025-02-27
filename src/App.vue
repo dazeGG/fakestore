@@ -1,13 +1,10 @@
 <template>
-	<NConfigProvider :theme="darkTheme" :theme-overrides="naiveRemConvert">
+	<NaiveProvider>
 		<CategoriesPage />
-	</NConfigProvider>
+	</NaiveProvider>
 </template>
 
 <script setup lang="ts">
-import { darkTheme } from 'naive-ui'
-import naiveRemConvert from '@/plugin/naiveRemConvert.ts'
-
-import { NConfigProvider } from 'naive-ui'
+import NaiveProvider from '@/layouts/NaiveProvider.vue'
 import CategoriesPage from '@/pages/CategoriesPage.vue'
 </script>
