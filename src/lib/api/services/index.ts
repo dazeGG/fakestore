@@ -1,5 +1,5 @@
-import CategoriesServices from '@/lib/api/services/CategoriesServices.ts'
+import ProductsServices from '@/lib/api/services/ProductsServices.ts'
 
 export {
-	CategoriesServices,
+	ProductsServices,
 }
