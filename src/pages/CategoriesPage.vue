@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<h1>Categories</h1>
-		<NGrid cols="3" x-gap="16" y-gap="16">
+		<NGrid cols="3" x-gap="" y-gap="" class="gap-4">
 			<NGridItem v-for="category in categories" :key="category">
 				<NCard>
 					{{ category }}
