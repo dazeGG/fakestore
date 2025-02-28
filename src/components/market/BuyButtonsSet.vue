@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<NButton v-if="!addedProduct" size="small" type="primary" class="w-full" @click="addProduct">Buy</NButton>
-		<div v-else class="flex gap-2">
+		<div v-else class="flex gap-2 justify-end">
 			<NInputGroup class="w-fit">
 				<NButton size="small" @click="removeProduct">
 					<template #icon>

@@ -1,5 +1,5 @@
 <template>
-	<NModal :show="props.show" :style="{ maxWidth: '50rem' }" @mask-click="cartStore.closeCart">
+	<NModal :show="props.show" :style="{ maxWidth: '40rem' }" @mask-click="cartStore.closeCart">
 		<NCard>
 			<template #header>
 				<div class="h2">Cart</div>

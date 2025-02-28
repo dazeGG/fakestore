@@ -9,8 +9,8 @@
 			</RouterLink>
 		</template>
 		<template #footer>
-			<div class="flex justify-between items-center">
-				<ProductPrice :product="product" />
+			<div class="flex flex-col gap-2">
+				<ProductPrice :product="product" show-full-price />
 				<BuyButtonsSet :product="props.product" show-cart-button />
 			</div>
 		</template>

@@ -8,7 +8,7 @@
 			</div>
 			<div class="flex flex-col gap-2">
 				<ProductPrice :product="props.product" show-full-price />
-				<BuyButtonsSet :product="props.product" />
+				<BuyButtonsSet :product="props.product" class="self-end" />
 			</div>
 		</div>
 		<NDivider v-if="props.showDivider" />
