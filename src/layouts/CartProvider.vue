@@ -2,7 +2,7 @@
 	<div>
 		<CartModal v-model:show="showModal" />
 		<NFloatButton type="primary" class="z-10" :bottom="50" :right="50" @click="openModal">
-			<Icon icon="solar:cart-5-bold" />
+			<Icon icon="mdi:cart-variant" />
 		</NFloatButton>
 		<slot></slot>
 	</div>
