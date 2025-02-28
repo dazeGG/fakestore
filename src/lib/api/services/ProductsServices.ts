@@ -10,6 +10,11 @@ class ProductsServices {
 		const res = await ProductsMethods.getProducts(category)
 		return res.data
 	}
+
+	async getProduct (id: number) {
+		const res = await ProductsMethods.getProduct(id)
+		return res.data
+	}
 }
 
 export default new ProductsServices()
