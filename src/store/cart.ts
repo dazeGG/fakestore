@@ -28,6 +28,13 @@ export const useCartStore = defineStore('cart', () => {
 		return products.value.findIndex(product => product.id === id)
 	}
 
+	const setProductCount = (product: IProduct, newCount: number): void => {
+		const productIndex: number = getProductIndex(product.id)
+		if (productIndex !== -1) {
+			products.value[productIndex].count = newCount
+		}
+	}
+
 	const addProduct = (product: IProduct) => {
 		products.value.push({ ...product, count: 1 })
 	}
@@ -77,6 +84,7 @@ export const useCartStore = defineStore('cart', () => {
 		products,
 		totalProducts,
 		getProductIndex,
+		setProductCount,
 		addProduct,
 		incrementProduct,
 		removeProduct,
