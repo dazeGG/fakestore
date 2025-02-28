@@ -28,30 +28,35 @@ export const useCartStore = defineStore('cart', () => {
 		return products.value.findIndex(product => product.id === id)
 	}
 
-	const addProduct = (product: IProduct): void => {
+	const addProduct = (product: IProduct) => {
+		products.value.push({ ...product, count: 1 })
+	}
+
+	const incrementProduct = (product: IProduct): void => {
 		const productIndex: number = getProductIndex(product.id)
-
-		if (productIndex === - 1) {
-			products.value.push({ ...product, count: 1 })
-		} else if (products.value[productIndex].count < 100) {
+		if (productIndex !== - 1) {
 			products.value[productIndex].count++
+			saveCart()
 		}
-
-		saveCart()
 	}
 
 	const removeProduct = (product: IProduct): void => {
+		const productIndex: number = getProductIndex(product.id)
+		products.value.splice(productIndex, 1)
+	}
+
+	const decrementProduct = (product: IProduct): void => {
 		const productIndex: number = getProductIndex(product.id)
 
 		if (productIndex !== - 1) {
 			products.value[productIndex].count--
 
 			if (products.value[productIndex].count === 0) {
-				products.value.splice(productIndex, 1)
+				removeProduct(product)
 			}
-		}
 
-		saveCart()
+			saveCart()
+		}
 	}
 
 	const clearCart = () => {
@@ -73,7 +78,9 @@ export const useCartStore = defineStore('cart', () => {
 		totalProducts,
 		getProductIndex,
 		addProduct,
+		incrementProduct,
 		removeProduct,
+		decrementProduct,
 		clearCart,
 	}
 })

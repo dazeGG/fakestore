@@ -3,7 +3,7 @@
 		<NButton v-if="!addedProduct" size="small" type="primary" class="w-full" @click="addProduct">Buy</NButton>
 		<div v-else class="flex gap-2 justify-end">
 			<NInputGroup class="w-fit">
-				<NButton size="small" @click="removeProduct">
+				<NButton size="small" @click="decrementProduct">
 					<template #icon>
 						<Icon icon="mdi:minus" />
 					</template>
@@ -17,7 +17,7 @@
 					:max="99"
 					class="max-w-12 text-center"
 				/>
-				<NButton :disabled="addedProduct.count === 99" size="small" @click="addProduct">
+				<NButton :disabled="addedProduct.count === 99" size="small" @click="incrementProduct">
 					<template #icon>
 						<Icon icon="mdi:plus" />
 					</template>
@@ -58,11 +58,15 @@ const openCart = () => {
 	cartStore.openCart()
 }
 
-const removeProduct = () => {
-	cartStore.removeProduct(props.product)
+const decrementProduct = () => {
+	cartStore.decrementProduct(props.product)
 }
 
 const addProduct = () => {
 	cartStore.addProduct(props.product)
+}
+
+const incrementProduct = () => {
+	cartStore.incrementProduct(props.product)
 }
 </script>
