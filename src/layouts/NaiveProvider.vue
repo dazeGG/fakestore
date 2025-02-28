@@ -1,7 +1,9 @@
 <template>
 	<NConfigProvider :theme="lightTheme" :theme-overrides="naiveRemConvert">
-		<NGlobalStyle />
-		<slot></slot>
+		<NNotificationProvider>
+			<NGlobalStyle />
+			<slot></slot>
+		</NNotificationProvider>
 	</NConfigProvider>
 </template>
 
@@ -9,5 +11,5 @@
 import { lightTheme } from 'naive-ui'
 import naiveRemConvert from '@/plugin/naiveRemConvert.ts'
 
-import { NConfigProvider, NGlobalStyle } from 'naive-ui'
+import { NConfigProvider, NNotificationProvider, NGlobalStyle } from 'naive-ui'
 </script>

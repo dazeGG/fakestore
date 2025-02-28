@@ -6,7 +6,7 @@
 			</template>
 			<template #header-extra>
 				<div class="flex items-start gap-4">
-					<NButton size="small" @click="cartStore.clearCart">Clear cart</NButton>
+					<NButton v-if="cartStore.products.length !== 0" size="small" @click="cartStore.clearCart">Clear cart</NButton>
 					<button @click="cartStore.closeCart">
 						<Icon icon="material-symbols:close-rounded" width="24" height="24" />
 					</button>
@@ -22,8 +22,8 @@
 				/>
 			</template>
 			<template #footer>
-				<div class="flex justify-end">
-					<NButton size="small" type="primary">Order</NButton>
+				<div v-if="cartStore.products.length !== 0" class="flex justify-end">
+					<NButton size="small" type="primary" @click="order">Order</NButton>
 				</div>
 			</template>
 		</NCard>
@@ -33,13 +33,25 @@
 <script setup lang="ts">
 import { useCartStore } from '@/store'
 
-import { NModal, NCard, NButton, NEmpty } from 'naive-ui'
+import { NModal, NCard, NButton, NEmpty, useNotification } from 'naive-ui'
 import { Icon } from '@iconify/vue'
 import CartProduct from '@/components/market/CartProduct.vue'
 
 const cartStore = useCartStore()
+const notification = useNotification()
 
 const props = defineProps<{
 	show?: boolean
 }>()
+
+const order = () => {
+	cartStore.clearCart()
+	cartStore.closeCart()
+	notification.success({
+		title: 'Success',
+		content: 'The order has successfully placed. Congratulations with the purchase!',
+		duration: 3000,
+		keepAliveOnHover: true,
+	})
+}
 </script>
