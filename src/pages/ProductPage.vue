@@ -47,18 +47,15 @@ import type { IProduct } from '@/types/modules/products'
 const product = ref<IProduct | null>(null)
 const productId = computed<number>(() => parseInt(useRoute().params.id as string))
 
-const characteristicsItems = computed<Record<string, string>>(() => {
-	if (product.value) {
-		return {
+const characteristicsItems = computed<Record<string, any>>(() => {
+	return product.value
+		? {
 			brand: product.value.brand,
 			color: product.value.color,
 			category: product.value.category,
 			model: product.value.model,
 		}
-	} else {
-		return {
-		}
-	}
+		: {}
 })
 
 const loadProduct = async () => {
