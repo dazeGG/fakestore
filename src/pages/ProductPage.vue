@@ -23,11 +23,8 @@
 		</div>
 		<NCard embedded size="small" class="h-fit">
 			<div class="flex flex-col gap-2">
-				<div class="flex gap-1 items-center">
-					<div class="h2">{{ product.price }}$</div>
-					<span v-if="fullPrice" class="line-through">{{ fullPrice.toFixed(2) }}$</span>
-				</div>
-				<NButton type="primary">Buy</NButton>
+				<ProductPrice :product="product" show-full-price />
+				<BuyButtonsSet :product="product" show-cart-button />
 			</div>
 		</NCard>
 	</div>
@@ -41,6 +38,8 @@ import { ProductsServices } from '@/lib/api/services'
 
 import { NCard, NButton, NEllipsis } from 'naive-ui'
 import Tag from '@/components/modules/products/misc/Tag.vue'
+import ProductPrice from '@/components/modules/products/ProductPrice.vue'
+import BuyButtonsSet from '@/components/market/BuyButtonsSet.vue'
 
 import type { IProduct } from '@/types/modules/products'
 

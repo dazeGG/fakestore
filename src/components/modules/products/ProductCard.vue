@@ -9,9 +9,9 @@
 			</RouterLink>
 		</template>
 		<template #footer>
-			<div class="flex justify-between items-center">
-				<span class="h3">{{ props.product.price }}$</span>
-				<NButton size="small" type="primary">Buy</NButton>
+			<div class="flex flex-col gap-2">
+				<ProductPrice :product="product" show-full-price />
+				<BuyButtonsSet :product="props.product" show-cart-button />
 			</div>
 		</template>
 	</NCard>
@@ -20,7 +20,9 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 
-import { NCard, NEllipsis, NButton } from 'naive-ui'
+import { NCard, NEllipsis } from 'naive-ui'
+import BuyButtonsSet from '@/components/market/BuyButtonsSet.vue'
+import ProductPrice from '@/components/modules/products/ProductPrice.vue'
 
 import type { IProduct } from '@/types/modules/products'
 
