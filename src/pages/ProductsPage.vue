@@ -1,5 +1,5 @@
 <template>
-	<Page :title="category">
+	<Page :title="category" show-back-button>
 		<NGrid cols="4" x-gap="" y-gap="" class="gap-4">
 			<NGridItem v-for="product in products" :key="product.id">
 				<ProductCard :product="product" />
