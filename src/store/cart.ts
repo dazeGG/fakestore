@@ -4,6 +4,16 @@ import { defineStore } from 'pinia'
 import type { IProduct, AddedProduct } from '@/types/modules/products'
 
 export const useCartStore = defineStore('cart', () => {
+	const showCart = ref<boolean>(false)
+
+	const openCart = () => {
+		showCart.value = true
+	}
+
+	const closeCart = () => {
+		showCart.value = false
+	}
+
 	const products = ref<AddedProduct[]>([])
 
 	const saveCart = () => {
@@ -51,6 +61,9 @@ export const useCartStore = defineStore('cart', () => {
 	initCart()
 
 	return {
+		showCart,
+		openCart,
+		closeCart,
 		products,
 		totalProducts,
 		getProductIndex,

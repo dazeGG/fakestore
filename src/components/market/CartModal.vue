@@ -1,11 +1,11 @@
 <template>
-	<NModal v-model:show="show" :style="{ maxWidth: '50rem' }">
+	<NModal :show="props.show" :style="{ maxWidth: '50rem' }" @mask-click="cartStore.closeCart">
 		<NCard segmented>
 			<template #header>
 				Cart
 			</template>
 			<template #header-extra>
-				<button @click="close">
+				<button @click="cartStore.closeCart">
 					<Icon icon="material-symbols:close-rounded" width="24" height="24" />
 				</button>
 			</template>
@@ -24,9 +24,7 @@ import { Icon } from '@iconify/vue'
 
 const cartStore = useCartStore()
 
-const show = defineModel<boolean>('show', { default: false })
-
-const close = () => {
-	show.value = false
-}
+const props = defineProps<{
+	show?: boolean
+}>()
 </script>

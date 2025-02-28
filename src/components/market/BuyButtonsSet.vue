@@ -1,27 +1,35 @@
 <template>
 	<div>
 		<NButton v-if="!addedProduct" size="small" type="primary" @click="addProduct">Buy</NButton>
-		<NInputGroup v-else class="w-fit">
-			<NButton size="small" @click="removeProduct">
+		<div v-else class="flex gap-2">
+			<NInputGroup class="w-fit">
+				<NButton size="small" @click="removeProduct">
+					<template #icon>
+						<Icon icon="mdi:minus" />
+					</template>
+				</NButton>
+				<!--  TODO :value -> v-model  -->
+				<NInputNumber
+					:value="addedProduct.count"
+					:show-button="false"
+					size="small"
+					:min="1"
+					:max="99"
+					class="max-w-12 text-center"
+				/>
+				<NButton :disabled="addedProduct.count === 99" size="small" @click="addProduct">
+					<template #icon>
+						<Icon icon="mdi:plus" />
+					</template>
+				</NButton>
+			</NInputGroup>
+			<NButton size="small" type="primary" @click="openCart">
 				<template #icon>
-					<Icon icon="mdi:minus" />
+					<Icon icon="mdi:arrow-right" />
 				</template>
+				<template #default>Cart</template>
 			</NButton>
-			<!--  TODO :value -> v-model  -->
-			<NInputNumber
-				:value="addedProduct.count"
-				:show-button="false"
-				size="small"
-				:min="1"
-				:max="99"
-				class="max-w-12 text-center"
-			/>
-			<NButton :disabled="addedProduct.count === 99" size="small" @click="addProduct">
-				<template #icon>
-					<Icon icon="mdi:plus" />
-				</template>
-			</NButton>
-		</NInputGroup>
+		</div>
 	</div>
 </template>
 
@@ -44,6 +52,10 @@ const addedProduct = computed(() => {
 	const productIndex: number = cartStore.getProductIndex(props.product.id)
 	return productIndex === -1 ? null : cartStore.products[productIndex]
 })
+
+const openCart = () => {
+	cartStore.openCart()
+}
 
 const removeProduct = () => {
 	cartStore.removeProduct(props.product)
