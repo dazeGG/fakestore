@@ -45,7 +45,7 @@ import Tag from '@/components/modules/products/misc/Tag.vue'
 import type { IProduct } from '@/types/modules/products'
 
 const product = ref<IProduct | null>(null)
-const productId = computed<number>(() => parseInt(useRoute().params.id as string))
+const productId = computed<number>(() => parseInt(useRoute().params.productId as string))
 
 const characteristicsItems = computed<Record<string, any>>(() => {
 	return product.value
