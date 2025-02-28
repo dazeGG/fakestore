@@ -9,7 +9,7 @@
 
 <script setup lang="ts">
 import { lightTheme } from 'naive-ui'
-import naiveRemConvert from '@/plugin/naiveRemConvert.ts'
+import naiveRemConvert from '@/lib/plugins/naiveRemConvert.ts'
 
 import { NConfigProvider, NNotificationProvider, NGlobalStyle } from 'naive-ui'
 </script>

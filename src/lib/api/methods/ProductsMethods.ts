@@ -11,6 +11,10 @@ class ProductsMethods {
 		return API.get(MODULE_BASE_ROUTE + '/category', { params: { type: category } })
 	}
 
+	getFirstProduct (category: string) {
+		return API.get(MODULE_BASE_ROUTE + '/category', { params: { type: category, limit: 1 } })
+	}
+
 	getProduct (id: number) {
 		return API.get(MODULE_BASE_ROUTE + '/' + id)
 	}
