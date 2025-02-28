@@ -54,6 +54,11 @@ export const useCartStore = defineStore('cart', () => {
 		saveCart()
 	}
 
+	const clearCart = () => {
+		products.value = []
+		saveCart()
+	}
+
 	const initCart = () => {
 		products.value = JSON.parse(localStorage.getItem('cart') || '[]')
 	}
@@ -69,5 +74,6 @@ export const useCartStore = defineStore('cart', () => {
 		getProductIndex,
 		addProduct,
 		removeProduct,
+		clearCart,
 	}
 })
