@@ -1,31 +1,35 @@
 <template>
-	<div>
-		<div class="h1">{{ category }}</div>
+	<Page :title="category">
 		<NGrid cols="4" x-gap="" y-gap="" class="gap-4">
 			<NGridItem v-for="product in products" :key="product.id">
 				<ProductCard :product="product" />
 			</NGridItem>
 		</NGrid>
-	</div>
+	</Page>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import { ProductsServices } from '@/lib/api/services'
 
 import { NGrid, NGridItem } from 'naive-ui'
+import Page from '@/components/common/Page.vue'
 import ProductCard from '@/components/modules/products/ProductCard.vue'
 
 import type { IProduct } from '@/types/modules/products'
 
-const { params: { category } } = useRoute()
+const category = computed<string>(() => useRoute().params.category as string)
 
 const products = ref<IProduct[]>([])
 
 const loadProducts = async () => {
-	products.value = (await ProductsServices.getProducts(category as string)).products
+	products.value = (await ProductsServices.getProducts(category.value)).products
 }
 
-loadProducts()
+const created = () => {
+	loadProducts()
+}
+
+created()
 </script>
