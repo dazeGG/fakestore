@@ -10,8 +10,8 @@
 		</template>
 		<template #footer>
 			<div class="flex justify-between items-center">
-				<span class="h3">{{ props.product.price }}$</span>
-				<BuyButtonsSet :product="props.product" />
+				<ProductPrice :product="product" />
+				<BuyButtonsSet :product="props.product" show-cart-button />
 			</div>
 		</template>
 	</NCard>
@@ -22,6 +22,7 @@ import { computed } from 'vue'
 
 import { NCard, NEllipsis } from 'naive-ui'
 import BuyButtonsSet from '@/components/market/BuyButtonsSet.vue'
+import ProductPrice from '@/components/modules/products/ProductPrice.vue'
 
 import type { IProduct } from '@/types/modules/products'
 

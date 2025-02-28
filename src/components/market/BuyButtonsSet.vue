@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<NButton v-if="!addedProduct" size="small" type="primary" @click="addProduct">Buy</NButton>
+		<NButton v-if="!addedProduct" size="small" type="primary" class="w-full" @click="addProduct">Buy</NButton>
 		<div v-else class="flex gap-2">
 			<NInputGroup class="w-fit">
 				<NButton size="small" @click="removeProduct">
@@ -23,7 +23,7 @@
 					</template>
 				</NButton>
 			</NInputGroup>
-			<NButton size="small" type="primary" @click="openCart">
+			<NButton v-if="props.showCartButton" size="small" type="primary" @click="openCart">
 				<template #icon>
 					<Icon icon="mdi:arrow-right" />
 				</template>
@@ -46,6 +46,7 @@ const cartStore = useCartStore()
 
 const props = defineProps<{
 	product: IProduct
+	showCartButton?: boolean
 }>()
 
 const addedProduct = computed(() => {

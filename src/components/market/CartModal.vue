@@ -10,7 +10,12 @@
 				</button>
 			</template>
 			<template #default>
-				Products
+				<CartProduct
+					v-for="(product, index) in cartStore.products"
+					:key="product.id"
+					:product="product"
+					:show-divider="index !== cartStore.products.length - 1"
+				/>
 			</template>
 		</NCard>
 	</NModal>
@@ -21,6 +26,7 @@ import { useCartStore } from '@/store'
 
 import { NModal, NCard } from 'naive-ui'
 import { Icon } from '@iconify/vue'
+import CartProduct from '@/components/market/CartProduct.vue'
 
 const cartStore = useCartStore()
 
