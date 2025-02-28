@@ -1,9 +1,9 @@
 <template>
 	<div v-if="product" class="flex gap-4">
 		<img :src="product.image" alt="" class="w-96 aspect-square object-contain" />
-		<div class="flex flex-col gap-4" :style="{ maxWidth: '30rem' }">
+		<div class="flex flex-col gap-2" :style="{ maxWidth: '30rem' }">
 			<div class="flex gap-2 items-center">
-				<NEllipsis class="h1">{{ product.title }}</NEllipsis>
+				<NEllipsis class="h3" line-clamp="2">{{ product.title }}</NEllipsis>
 				<Tag v-if="product.onSale">Sale</Tag>
 				<Tag v-if="product.popular" type="info">Popular</Tag>
 				<Tag v-if="product.discount">{{ product.discount }}%</Tag>
@@ -22,10 +22,10 @@
 			</NCard>
 		</div>
 		<NCard embedded size="small" class="h-fit">
-			<div class="flex flex-col gap-4">
-				<div class="flex items-center">
+			<div class="flex flex-col gap-2">
+				<div class="flex gap-1 items-center">
 					<div class="h2">{{ product.price }}$</div>
-					<span class="line-through">full price placeholder</span>
+					<span v-if="fullPrice" class="line-through">{{ fullPrice.toFixed(2) }}$</span>
 				</div>
 				<NButton type="primary">Buy</NButton>
 			</div>
@@ -56,6 +56,14 @@ const characteristicsItems = computed<Record<string, any>>(() => {
 			model: product.value.model,
 		}
 		: {}
+})
+
+const fullPrice = computed<number | null>(() => {
+	if (product.value && product.value.discount) {
+		return product.value.price / (1 - (product.value.discount / 100))
+	} else {
+		return null
+	}
 })
 
 const loadProduct = async () => {
