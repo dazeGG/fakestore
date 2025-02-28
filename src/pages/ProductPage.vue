@@ -11,7 +11,7 @@
 			<div class="h6">{{ product.description }}</div>
 			<NCard segmented size="small" class="mt-2">
 				<template #header>
-					<div class="h2">Characteristics</div>
+					<div class="h4">Characteristics</div>
 				</template>
 				<template #default>
 					<div v-for="(value, key) in characteristicsItems" :key="key" class="flex gap-4 justify-between">
