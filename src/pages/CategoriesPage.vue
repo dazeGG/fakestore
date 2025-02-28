@@ -27,5 +27,9 @@ const loadCategories = async () => {
 	categories.value = (await ProductsServices.getCategories()).categories
 }
 
-loadCategories()
+const created = () => {
+	loadCategories()
+}
+
+created()
 </script>

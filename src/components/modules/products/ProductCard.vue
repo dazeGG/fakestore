@@ -1,7 +1,7 @@
 <template>
 	<NCard size="small">
 		<template #default>
-			<img :src="props.product.image" alt="" :style="{ aspectRatio: '1 / 1', objectFit: 'contain', width: '100%' }" />
+			<img :src="props.product.image" alt="" class="w-full aspect-square object-contain" />
 			<span class="h4">
 				<NEllipsis line-clamp="2">{{ props.product.title }}</NEllipsis>
 			</span>
