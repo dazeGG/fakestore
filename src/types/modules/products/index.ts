@@ -9,7 +9,8 @@ interface IProduct {
 	color: string
 	category: string
 	discount: number
-	onSale: boolean
+	onSale?: boolean
+	popular?: boolean
 }
 
 export type {

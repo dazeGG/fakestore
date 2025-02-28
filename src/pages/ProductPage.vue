@@ -1,11 +1,12 @@
 <template>
 	<div v-if="product" class="flex gap-4">
 		<img :src="product.image" alt="" class="w-96 aspect-square object-contain" />
-		<div class="flex flex-col gap-4">
+		<div class="flex flex-col gap-4" :style="{ maxWidth: '30rem' }">
 			<div class="flex gap-2 items-center">
-				<span class="h1">{{ product.title }}</span>
-				<SaleTag v-if="product.onSale" />
-				<DiscountTag v-if="product.discount" :discount="product.discount" />
+				<NEllipsis class="h1">{{ product.title }}</NEllipsis>
+				<Tag v-if="product.onSale">Sale</Tag>
+				<Tag v-if="product.popular" type="info">Popular</Tag>
+				<Tag v-if="product.discount">{{ product.discount }}%</Tag>
 			</div>
 			<div class="h6">{{ product.description }}</div>
 			<NCard segmented size="small" class="mt-2">
@@ -39,8 +40,7 @@ import { capitalize } from 'lodash'
 import { ProductsServices } from '@/lib/api/services'
 
 import { NCard, NButton, NEllipsis } from 'naive-ui'
-import SaleTag from '@/components/modules/products/misc/SaleTag.vue'
-import DiscountTag from '@/components/modules/products/misc/DiscountTag.vue'
+import Tag from '@/components/modules/products/misc/Tag.vue'
 
 import type { IProduct } from '@/types/modules/products'
 
