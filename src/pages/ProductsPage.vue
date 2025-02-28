@@ -1,6 +1,6 @@
 <template>
 	<Page :title="category" show-back-button>
-		<NGrid cols="4" x-gap="" y-gap="" class="gap-4">
+		<NGrid cols="5" x-gap="" y-gap="" class="gap-4">
 			<NGridItem v-for="product in products" :key="product.id">
 				<ProductCard :product="product" />
 			</NGridItem>
