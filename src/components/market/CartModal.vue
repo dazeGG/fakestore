@@ -17,8 +17,12 @@
 </template>
 
 <script setup lang="ts">
+import { useCartStore } from '@/store'
+
 import { NModal, NCard } from 'naive-ui'
 import { Icon } from '@iconify/vue'
+
+const cartStore = useCartStore()
 
 const show = defineModel<boolean>('show', { default: false })
 
