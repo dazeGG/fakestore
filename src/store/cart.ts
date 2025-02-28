@@ -1,11 +1,7 @@
 import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
 
-import type { IProduct } from '@/types/modules/products'
-
-type AddedProduct = IProduct & {
-	count: number
-}
+import type { IProduct, AddedProduct } from '@/types/modules/products'
 
 export const useCartStore = defineStore('cart', () => {
 	const products = ref<AddedProduct[]>([])
@@ -24,16 +20,32 @@ export const useCartStore = defineStore('cart', () => {
 
 	const addProduct = (product: IProduct): void => {
 		const productIndex: number = getProductIndex(product.id)
+
 		if (productIndex === - 1) {
 			products.value.push({ ...product, count: 1 })
-		} else {
+		} else if (products.value[productIndex].count < 100) {
 			products.value[productIndex].count++
 		}
+
+		saveCart()
+	}
+
+	const removeProduct = (product: IProduct): void => {
+		const productIndex: number = getProductIndex(product.id)
+
+		if (productIndex !== - 1) {
+			products.value[productIndex].count--
+
+			if (products.value[productIndex].count === 0) {
+				products.value.splice(productIndex, 1)
+			}
+		}
+
 		saveCart()
 	}
 
 	const initCart = () => {
-		products.value = JSON.parse(localStorage.getItem('cart'))
+		products.value = JSON.parse(localStorage.getItem('cart') || '[]')
 	}
 
 	initCart()
@@ -43,5 +55,6 @@ export const useCartStore = defineStore('cart', () => {
 		totalProducts,
 		getProductIndex,
 		addProduct,
+		removeProduct,
 	}
 })

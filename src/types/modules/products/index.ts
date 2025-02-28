@@ -13,6 +13,11 @@ interface IProduct {
 	popular?: boolean
 }
 
+type AddedProduct = IProduct & {
+	count: number
+}
+
 export type {
 	IProduct,
+	AddedProduct,
 }
