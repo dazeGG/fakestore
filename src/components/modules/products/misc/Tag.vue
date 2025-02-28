@@ -1,7 +1,5 @@
 <template>
 	<NTag
-		round
-		:bordered="false"
 		size="small"
 		:type="props.type"
 		:style="{ fontSize: '0.625rem' }"

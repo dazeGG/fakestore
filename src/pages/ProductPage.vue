@@ -2,12 +2,12 @@
 	<div v-if="product" class="flex gap-4">
 		<img :src="product.image" alt="" class="w-96 aspect-square object-contain" />
 		<div class="flex flex-col gap-2" :style="{ maxWidth: '30rem' }">
-			<div class="flex gap-2 items-center">
-				<NEllipsis class="h3" line-clamp="2">{{ product.title }}</NEllipsis>
+			<div class="flex gap-2">
 				<Tag v-if="product.onSale">Sale</Tag>
 				<Tag v-if="product.popular" type="info">Popular</Tag>
 				<Tag v-if="product.discount">{{ product.discount }}%</Tag>
 			</div>
+			<NEllipsis class="h3" line-clamp="2">{{ product.title }}</NEllipsis>
 			<div class="h6">{{ product.description }}</div>
 			<NCard segmented size="small" class="mt-2">
 				<template #header>
