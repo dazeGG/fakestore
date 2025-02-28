@@ -4,7 +4,7 @@
 			<RouterLink :to="routerLinkTo">
 				<img :src="props.product.image" alt="" class="w-full aspect-square object-contain" />
 			</RouterLink>
-			<RouterLink :to="routerLinkTo" class="h4">
+			<RouterLink :to="routerLinkTo" class="h5">
 				<NEllipsis line-clamp="2" :tooltip="{ delay: 200 }">{{ props.product.title }}</NEllipsis>
 			</RouterLink>
 		</template>
