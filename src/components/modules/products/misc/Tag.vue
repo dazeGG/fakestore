@@ -15,7 +15,7 @@ import { NTag } from 'naive-ui'
 
 const props = withDefaults(
 	defineProps<{
-		type: 'error' | 'default' | 'primary' | 'info' | 'success' | 'warning'
+		type?: 'error' | 'default' | 'primary' | 'info' | 'success' | 'warning'
 	}>(),
 	{
 		type: 'error',
