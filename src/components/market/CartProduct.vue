@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div class="grid gap-4" :style="{ gridTemplateColumns: '5rem auto 10rem' }">
+		<div class="grid gap-4" :style="{ gridTemplateColumns: '5rem 1fr auto' }">
 			<img :src="props.product.image" alt="" class="aspect-square object-contain" />
 			<div class="flex flex-col gap-1">
 				<div class="h6">{{ props.product.title }}</div>

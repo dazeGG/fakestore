@@ -1,6 +1,6 @@
 <template>
 	<NModal :show="props.show" :style="{ maxWidth: '50rem' }" @mask-click="cartStore.closeCart">
-		<NCard segmented>
+		<NCard>
 			<template #header>
 				<div class="h2">Cart</div>
 			</template>
@@ -20,6 +20,11 @@
 					:product="product"
 					:show-divider="index !== cartStore.products.length - 1"
 				/>
+			</template>
+			<template #footer>
+				<div class="flex justify-end">
+					<NButton size="small" type="primary">Order</NButton>
+				</div>
 			</template>
 		</NCard>
 	</NModal>
