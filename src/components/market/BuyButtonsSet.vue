@@ -10,12 +10,13 @@
 				</NButton>
 				<!--  TODO :value -> v-model  -->
 				<NInputNumber
-					:value="addedProduct.count"
+					v-model:value="productCount"
 					:show-button="false"
 					size="small"
 					:min="1"
 					:max="99"
 					class="max-w-12 text-center"
+					@update:value="handleProductCountUpdate"
 				/>
 				<NButton :disabled="addedProduct.count === 99" size="small" @click="incrementProduct">
 					<template #icon>
@@ -34,7 +35,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
+import { ref, computed, watch } from 'vue'
 import { useCartStore } from '@/store'
 
 import { NButton, NInputGroup, NInputNumber } from 'naive-ui'
@@ -48,6 +49,8 @@ const props = defineProps<{
 	product: IProduct
 	showCartButton?: boolean
 }>()
+
+const productCount = ref<number | null>(null)
 
 const addedProduct = computed(() => {
 	const productIndex: number = cartStore.getProductIndex(props.product.id)
@@ -69,4 +72,29 @@ const addProduct = () => {
 const incrementProduct = () => {
 	cartStore.incrementProduct(props.product)
 }
+
+const handleProductCountUpdate = () => {
+	if (productCount.value) {
+		cartStore.setProductCount(props.product, productCount.value)
+	} else {
+		cartStore.removeProduct(props.product)
+	}
+}
+
+const initProductCount = () => {
+	productCount.value = addedProduct.value?.count ?? null
+}
+
+const created = () => {
+	initProductCount()
+}
+
+created()
+
+watch(
+	() => addedProduct.value?.count,
+	(newValue?: number) => {
+		productCount.value = newValue ?? null
+	},
+)
 </script>
