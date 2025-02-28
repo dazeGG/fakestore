@@ -1,7 +1,7 @@
 <template>
-	<div v-if="product" class="flex gap-4">
-		<img :src="product.image" alt="" class="w-96 aspect-square object-contain" />
-		<div class="flex flex-col gap-2" :style="{ maxWidth: '30rem' }">
+	<div v-if="product" class="grid gap-4" :style="{ gridTemplateColumns: '25rem auto 15rem' }">
+		<img :src="product.image" alt="" class="w-full aspect-square object-contain" />
+		<div class="flex flex-col gap-2">
 			<div class="flex gap-2">
 				<Tag v-if="product.onSale">Sale</Tag>
 				<Tag v-if="product.popular" type="info">Popular</Tag>
